@@ -37,6 +37,7 @@ class ClientThread(threading.Thread):
                 self.saveData(terminalClient.getSensorData())
                 terminalClient.sendOKClient()
                 self.log('Client %s data received successfully!'%terminalClient.getImei())
+                print(terminalClient.getSensorData())
             else:
                 terminalClient.sendFalse()
                 self.log('Client failed')
